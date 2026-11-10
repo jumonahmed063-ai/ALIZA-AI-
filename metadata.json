@@ -1,0 +1,9 @@
+{
+  "name": "ALIZA AI – Smart Voice Assistant",
+  "description": "Your smart personal voice assistant developed by MR. JUMON. Features voice control for YouTube, WhatsApp, phone tools, and natural conversational AI.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
