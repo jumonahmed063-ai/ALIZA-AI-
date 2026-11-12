@@ -180,7 +180,7 @@ export const CompanionHologram: React.FC<CompanionHologramProps> = ({
           }
           className={`absolute -bottom-4 right-1/2 translate-x-1/2 z-20 flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 shadow-xl cursor-pointer ${
             isListening
-              ? 'bg-gradient-to-r from-rose-500 via-pink-600 to-red-600 text-white scale-105 shadow-red-500/50 ring-4 ring-red-400/30'
+              ? 'bg-gradient-to-r from-rose-500 via-pink-600 to-red-600 text-white scale-105 shadow-red-500/50 ring-4 ring-red-400/30 animate-mic-ring'
               : 'bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-500 text-white hover:scale-105 shadow-purple-500/40 hover:shadow-purple-500/70'
           }`}
         >

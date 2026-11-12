@@ -8,30 +8,29 @@ on:
 jobs:
   build-apk:
     name: Build ALIZA AI Debug APK
-    runs-on: ubuntu-latesubuntu-latesubuntu-latestubuntu-latest
+    runs-on: ubuntu-latest
 
-ubuntu-latesubuntu-latesckoutubuntu-latesubuntu-latesckoutubuntu-latesubuntu-latesckout
-ubuntu-ubuntu-latesubuntu-latesubuntu-latesubuntu-latepatesubuntu-latesubuntu-latesubuntu-lateplatesubuntu-latesubuntu-latesubuntu-latelatesubuntu-latesubuntu-latesubuntu-latesckoutckout Source Code
-        uses: acactionstions/checcheckoutcheckoutkout@v4
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
-        withwith:
-          node-venode-versionrsion: 20
-          cac
+        with:
+          node-version: 20
+          cache: 'npm'
 
-      - name: SSetupetup Java JDK 17
-        uses: actiactionsons/setup-java@v4
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
 
-
       - name: Install NPM Dependencies
-        runrun: npm ci
+        run: npm ci
 
-      - name: Build Web ApplicaApplicationtion
-       env:
+      - name: Build Web Application
+        env:
           VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL || '' }}
         run: npm run build
 
